@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './routers/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,10 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '云音乐',
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(appBar: AppBar(title: const Text('云音乐'))),
+      title: '云音乐',
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: '/',
     );
   }
 }
